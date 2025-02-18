@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prochainement | Movie{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row">
+            {% for movie in movies %}
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            {% if movie.poster_path is not null %}
+                                <img src="{{ movie|movie_poster }}" class="card-img-top" alt="{{ movie.title }}">
+                            {% endif %}
+                            <h5 class="card-title">{{ movie.title }}</h5>
+                            <p class="card-text">{{ movie.overview }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

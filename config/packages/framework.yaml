@@ -1,0 +1,21 @@
+framework:
+    secret: "%env(APP_SECRET)%"
+
+
+    session: true
+
+    esi: true
+    fragments: true
+
+    http_client:
+        scoped_clients:
+            tmdb.client:
+                base_uri: 'https://api.themoviedb.org'
+                headers:
+                    Authorization: 'Bearer %env(TMDB_API_TOKEN)%'
+
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file
