@@ -12,6 +12,8 @@
 <meta name="description" content="Une application Symfony  qui utilise l'API de The Movie Database (TMDb) pour afficher les dernières sorties de films et séries, les prochaines sorties, et permettre la recherche de films et séries.">
 <meta name="keywords" content="Ludovic MOYO, Ludovic Dev, The Movie Database, TMDb">
 <link rel="icon" href="https://portfolio.ludovicdev.com/images/svg/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 {% block stylesheets %}
 {% endblock %}
 
@@ -20,25 +22,27 @@
 {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('movie.index') }}">TMDB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ path('movie.upcoming') }}">Prochainent</a>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ path('movie.index') }}">TMDB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="{{ path('movie.upcoming') }}">Prochainement</a>
+                </div>
             </div>
+    
+            <form class="d-flex" role="search" action="{{ path('movie.search') }}">
+                <input class="form-control me-2" name="query" type="search" placeholder="Rechercher" aria-label="Rechercher">
+                <button class="btn btn-outline-success" type="submit">
+                    <span class="d-none d-sm-inline">Rechercher</span>
+                    <i class="fas fa-search d-inline d-sm-none"></i>
+                </button>
+            </form>
         </div>
-
-        <form class="d-flex" role="search" action="{{ path('movie.search') }}" >
-            <input class="form-control me-2" name="query" type="search" placeholder="Rechercher" aria-label="Rechercher">
-            <button class="btn btn-outline-success" type="submit">Rechercher</button>
-        </form>
-
-    </div>
-</nav>
+    </nav>
 {% block body %}{% endblock %}
 </body>
 </html>
