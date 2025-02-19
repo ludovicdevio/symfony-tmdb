@@ -25,7 +25,7 @@ final class MovieController extends AbstractController
     }
 
     #[Route('/upcoming', name: 'movie.upcoming')]
-    public function upcoming()
+    public function upcoming(): Response
     {
         return $this->render('movie/upcoming.html.twig', [
             'movies' => $this->client->upcoming(),
