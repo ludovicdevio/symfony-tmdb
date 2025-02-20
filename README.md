@@ -38,7 +38,6 @@ Pour obtenir votre clé API TMDb, inscrivez-vous sur The Movie Database et allez
 
 Démarrez le serveur de développement Symfony :
 
-    ```bash
     symfony serve:start -d
 
 Vous pourrez accéder à l'application dans votre navigateur à l'adresse suivante : http://localhost:8000.
