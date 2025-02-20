@@ -26,7 +26,6 @@ Avant de commencer, assurez-vous que vous avez installé les éléments suivants
    cd symfony-tmdb
 Installez les dépendances via Composer :
 
-    ```bash
     composer install
 Créez un fichier .env à la racine du projet et ajoutez votre clé API TMDb.
 
