@@ -21,7 +21,6 @@ Avant de commencer, assurez-vous que vous avez installé les éléments suivants
 
 1. Clonez ce repository :
 
-   ```bash
    git clone https://github.com/ludovicdevio/symfony-tmdb.git
    cd symfony-tmdb
 Installez les dépendances via Composer :
