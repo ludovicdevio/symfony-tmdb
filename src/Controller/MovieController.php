@@ -16,7 +16,7 @@ final class MovieController extends AbstractController
 
     }
 
-    #[Route('/', name: 'movie.index')]
+    #[Route('/', name: 'movie.index', options: ['sitemap' => true])]
     public function index(): Response
     {
         return $this->render('movie/index.html.twig', [
@@ -24,7 +24,7 @@ final class MovieController extends AbstractController
         ]);
     }
 
-    #[Route('/upcoming', name: 'movie.upcoming')]
+    #[Route('/upcoming', name: 'movie.upcoming',options: ['sitemap' => ['priority' => 1]])]
     public function upcoming(): Response
     {
         return $this->render('movie/upcoming.html.twig', [
