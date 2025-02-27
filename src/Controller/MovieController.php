@@ -32,7 +32,7 @@ final class MovieController extends AbstractController
         ]);
     }
 
-    #[Route('/search', name: 'movie.search')]
+    #[Route('/search', name: 'movie.search', options: ['sitemap' => ['priority' => 1]])]
     public function search(#[MapQueryParameter] string $query): Response
     {
         return $this->render('movie/search.html.twig', [
