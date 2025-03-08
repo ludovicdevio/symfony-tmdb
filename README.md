@@ -19,14 +19,15 @@ Avant de commencer, assurez-vous que vous avez installé les éléments suivants
 
 ## Installation
 
-1. Clonez ce repository :
+1.  Clonez ce repository :
 
-   git clone https://github.com/ludovicdevio/symfony-tmdb.git
-   cd symfony-tmdb
-Installez les dépendances via Composer :
+    git clone https://github.com/ludovicdevio/symfony-tmdb.git
+    cd symfony-tmdb
+    Installez les dépendances via Composer :
 
-    composer install
-Créez un fichier .env à la racine du projet et ajoutez votre clé API TMDb.
+        composer install
+
+    Créez un fichier .env à la racine du projet et ajoutez votre clé API TMDb.
 
 Exemple de contenu du fichier .env :
 
@@ -66,3 +67,5 @@ Ce projet est sous licence MIT.
 Remerciements
 [The Movie Database (TMDb)](https://www.themoviedb.org/) pour l'API gratuite et puissante.
 
+##Generation du Sitemap
+Doc: https://github.com/prestaconcept/PrestaSitemapBundle/blob/4.x/doc/1-installation.md
